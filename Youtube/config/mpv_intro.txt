@@ -1,0 +1,93 @@
+Benoetigt zusaetzlich "pip3 install youtube-dl" oder aehnliches
+
+Usage:   mpv [options] [url|path/]filename
+
+Basic options:
+ --start=<time>    seek to given (percent, seconds, or hh:mm:ss) position
+ --no-audio        do not play sound
+ --no-video        do not play video
+ --no-audio-display
+ --fs              fullscreen playback
+ --sub-file=<file> specify subtitle file to use
+ --playlist=<file> specify playlist file
+
+ --list-options    list all mpv options
+ --h=<string>      print options which contain the given string in their name
+
+
+**************************************************
+
+This is a slightly more advanced way: It picks the best format it can find (up to but not above 1080p),
+chooses 30fps or lower (since 60fps just leads to dropped frames and stutter on my computer), and lastly it also ignores the stupid VP9 codec.
+
+--ytdl-format='bestvideo[height<=1080][fps<=30][vcodec!=vp9]+bestaudio/best'
+
+If you want to limit it to 720p30 or lower, use this instead:
+
+--ytdl-format='bestvideo[height<=720][fps<=30][vcodec!=vp9]+bestaudio/best'
+
+No matter what you do, I highly recommend using one of these lines in your mpv.conf.
+Otherwise it always picks the highest-quality version, which may mean 4K @ 60 fps = hell for your CPU to decode, and a total waste of bandwidth!
+
+**************************************************
+
+mpv --fs --ytdl-format=136+140 "youtubelink"
+mpv --no-audio-display music.mp3
+/*
+  --playlist-start=0 ist erstes Item
+  --playlist-end=12
+*/
+
+**************************************************
+https://mpv.io/manual/stable/#configuration-files
+
+You can put all of the options in configuration files which will be read every time mpv is run.
+The system-wide configuration file 'mpv.conf' is in your configuration directory (e.g. /etc/mpv or /usr/local/etc/mpv),
+the user-specific one is ~/.config/mpv/mpv.conf. For details and platform specifics (in particular Windows paths) see the FILES section.
+
+User-specific options override system-wide options and options given on the command line override either.
+The syntax of the configuration files is option=value. Everything after a # is considered a comment.
+Options that work without values can be enabled by setting them to yes and disabled by setting them to no.
+Even suboptions can be specified in this way.
+
+
+
+Example configuration file:
+
+# Use GPU-accelerated video output by default.
+vo=gpu
+# Use quotes for text that can contain spaces:
+status-msg="Time: ${time-pos}"
+
+
+
+Example mpv config file with profiles:
+
+# normal top-level option
+fullscreen=yes
+
+# a profile that can be enabled with --profile=big-cache
+[big-cache]
+cache=yes
+demuxer-max-bytes=123400KiB
+demuxer-readahead-secs=20
+
+[slow]
+profile-desc="some profile name"
+# reference a builtin profile
+profile=gpu-hq
+
+[fast]
+vo=vdpau
+
+# using a profile again extends it
+[slow]
+framedrop=no
+# you can also include other profiles
+profile=big-cache
+
+
+
+
+
+.

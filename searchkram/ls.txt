@@ -1,0 +1,5 @@
+ls -lAh
+l = Auflistung
+A = Alles zeigen, bis auf "." oder ".."
+h = For Humans understandable.
+

@@ -1,0 +1,2 @@
+sudo apt install ppa-purge
+sudo ppa-purge ppa:kisak/kisak-mesa

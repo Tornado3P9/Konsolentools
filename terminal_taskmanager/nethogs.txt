@@ -1,0 +1,3 @@
+sudo nethogs
+
+(Zeigt aktive Internetverbindungen sortiert nach Applikationen an)

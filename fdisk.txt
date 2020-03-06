@@ -1,0 +1,41 @@
+
+Aufruf:
+ fdisk [Optionen] <Festplatte>    Partitionstabelle ändern
+ fdisk [Optionen] -l <Festplatte> Partitionstabelle(n) auflisten
+
+Eine Plattenpartitionstabelle anzeigen oder verändern.
+
+Optionen:
+ -b, --sector-size <Größe>      physische und logische Sektorgröße
+ -B, --protect-boot            Bootbits nicht löschen, wenn eine neue
+                               Kennung erzeugt wird
+ -c, --compatibility[=<Modus>] Kompatibilitätsmodus: „dos“ oder „nondos“ (Standard)
+ -L, --color[=<Wann>]          Ausgabe einfärben („auto“, „always“ oder „never“)
+                                 Farben standardmäßig aktiviert
+ -l, --list                    Partitionen anzeigen und Programm beenden
+ -o, --output <Liste>          Spalten der Ausgabe
+ -t <Typ>                      die Erkennung nur von bestimmten
+                                 Partitionstabellentypen erzwingen
+ -u, --units[=<Einheit>]       Anzeigeeinheiten: „cylinders“ oder „sectors“ (Standard)
+ -s, --getsz                   Gerätegröße in 512-Byte-Sektoren anzeigen [VERALTET]
+     --bytes                   GRÖSSE in Bytes anstatt im menschenlesbaren
+                               Format ausgeben
+ -w, --wipe <Modus>            Signaturen entfernen (auto, always oder never)
+ -W, --wipe-partitions <Modus>  Signaturen von neuen PArtitionen entfernen (auto, always oder never)
+
+ -C, --cylinders <Anzahl>      die Anzahl der Zylinder angeben
+ -H, --heads <Anzahl>          die Anzahl der Köpfe angeben
+ -S, --sectors <Anzahl>        die Anzahl der Sektoren pro Spur angeben
+
+ -h, --help                    diese Hilfe anzeigen
+ -V, --version                 Version anzeigen
+
+Available output columns:
+ gpt: Device Start End Sectors Size Type Type-UUID Attrs Name UUID
+ dos: Device Start End Sectors Cylinders Size Type Id Attrs Boot End-C/H/S
+      Start-C/H/S
+ bsd: Slice Start End Sectors Cylinders Size Type Bsize Cpg Fsize
+ sgi: Device Start End Sectors Cylinders Size Type Id Attrs
+ sun: Device Start End Sectors Cylinders Size Type Id Flags
+
+Für weitere Einzelheiten siehe fdisk(8).

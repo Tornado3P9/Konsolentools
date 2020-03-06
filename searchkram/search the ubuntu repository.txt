@@ -1,0 +1,3 @@
+apt search <Program Name>
+
+z.B.: apt search subtitle

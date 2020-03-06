@@ -1,0 +1,29 @@
+#https://wiki.ubuntuusers.de/chmod/
+#https://wiki.ubuntuusers.de/chown/
+
+#Vergib Owner Rechte:
+sudo chown -R 1000:1000 /media/Ext Festplatte
+
+
+#Vergib Ausführ(x), Write(w), Read(r) Rechte:
+sudo chmod 777 /media/disk
+sudo chmod 764 filename
+
+#Version mit Zahlen:
+0 	Keine
+1 	x
+2 	w
+3 	w+x
+4 	r
+5 	r+x
+6 	r+w
+7 	r+w+x
+
+#Beispiele:
+644 	Der Eigentümer darf lesen und schreiben, alle anderen nur lesen. (6 = 4 + 2)
+744 	Der Eigentümer darf lesen, schreiben und ausführen, alle anderen nur lesen. (7 = 4 + 2 + 1)
+660 	Eigentümer und Gruppe dürfen lesen und schreiben, der Rest nichts.
+4755 	Alle dürfen lesen und ausführen, der Eigentümer auch schreiben. Zusätzlich wird das SetUID-Bit gesetzt.
+
+#In Terminal: ls -lh
+xrw-rw-r-- ......... ist das Gleiche, wie 764

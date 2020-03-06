@@ -1,0 +1,10 @@
+# some more aliases
+alias anaconda='cd /home/user/anaconda3/bin && ./python3.6'
+alias nHistory='history -c && history -w'
+alias beenden='shutdown -h now'
+alias neustart='reboot'
+
+#Anaconda
+export PATH="/home/user/anaconda3/bin:$PATH"
+#jupyter-notebook
+alias notebook='jupyter notebook'

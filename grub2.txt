@@ -1,0 +1,8 @@
+#Grub 2 erneut in den MBR der Festplatte installieren
+sudo grub-setup /dev/sdX
+
+#Grub 2 vollständig neu installieren
+sudo grub-install /dev/sdX
+
+#Die Konfigurationsdatei neu erstellen oder aktualisieren
+sudo update-grub

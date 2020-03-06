@@ -1,0 +1,2 @@
+user@pc:~$ which wget
+/usr/bin/wget

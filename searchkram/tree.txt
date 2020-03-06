@@ -1,0 +1,3 @@
+sudo apt install tree
+
+(Wie ls oder dir, aber zeigt alle Unterordner als Baumstruktur an. Sehr nützlich!)

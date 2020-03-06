@@ -1,0 +1,10 @@
+## Abhör-/AnalyseTool
+
+# ngrep 'USER|PASS' src host 192.168.0.20 and tcp port 21 
+
+Sucht nach im Datenstrom nach "USER" oder "PASS". Untersucht werden alle Pakete, die vom Host 192.168.0.20 kommen und Quell- oder Zielport 21 (FTP) besitzen, womit im Handumdrehen Klartextpasswörter für FTP ermittelt werden können. Damit wirklich nur FTP-Verbindungen untersucht werden, ist es besser hier "and src tcp port 21" zu schreiben. 
+
+
+# tcpdump
+
+tcpdump dient der Analyse von IP-Paketen, um Fehler oder ungewollte Netzwerkzugriffe zu finden. 

@@ -1,0 +1,2 @@
+guvcview --control_only
+

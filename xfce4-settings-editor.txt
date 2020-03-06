@@ -1,0 +1,5 @@
+Alle Einstellungen der XFCE-Umgebung mitsamt xfce4-settings-editor usw befindet sich in:
+
+/etc/xdg
+
+(Gute Situation um "tree /etc/xdg" auszuprobieren)

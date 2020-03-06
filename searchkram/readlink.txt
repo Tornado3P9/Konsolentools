@@ -1,0 +1,3 @@
+readlink -f playlist.m3u
+
+#Im Grunde aehnlich wie 'locate playlist.m3u'

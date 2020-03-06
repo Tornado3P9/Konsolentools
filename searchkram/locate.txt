@@ -1,0 +1,3 @@
+locate xubuntu-development.png
+
+/usr/share/xfce4/backdrops/xubuntu-development.png

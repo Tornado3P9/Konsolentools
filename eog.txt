@@ -1,0 +1,17 @@
+Aufruf:
+  eog [OPTION …] [FILE…]
+
+Hilfeoptionen:
+  -h, --help                Hilfeoptionen anzeigen
+  --help-all                Alle Hilfeoptionen anzeigen
+  --help-gtk                GTK+-Optionen anzeigen
+
+Anwendungsoptionen:
+  -f, --fullscreen          Im Vollbildmodus anzeigen
+  -g, --disable-gallery     Bildersammlung deaktivieren
+  -s, --slide-show          Als Diaschau anzeigen
+  -n, --new-instance        Eine neue Instanz starten, anstatt eine vorhandene zu verwenden
+  -w, --single-window       In einem einzelnen Fenster öffnen. Wenn mehrere Fenster geöffnet sind, wird das erste verwendet.
+  --version                 Version der Anwendung anzeigen
+  --display=ANZEIGE         X-Anzeige, die verwendet werden soll
+

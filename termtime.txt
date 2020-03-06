@@ -1,0 +1,22 @@
+pip3 install termtime
+
+usage: termtime [-h] [-f {default}] [--max-width MAX_WIDTH]
+                [--max-height MAX_HEIGHT]
+                {stopwatch,clock} ...
+
+positional arguments:
+  {stopwatch,clock}     Modes that termtime supports.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f {default}, --font {default}
+                        The font to use to render the output.
+  --max-width MAX_WIDTH
+                        The maximum width of the output.
+  --max-height MAX_HEIGHT
+                        The maximum height of the output.
+
+
+
+#Man kann auch einfach im Terminal die sleep-funktion benutzen: „s“ für Sekunden (Vorgabe), „m“ für Minuten, „h“ für Stunden, „d“ für Tage
+sleep 15m && vlc music.mp3

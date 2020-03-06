@@ -1,0 +1,5 @@
+df -h
+
+lsblk (list block command)
+
+sudo fdisk -l
