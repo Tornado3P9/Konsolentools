@@ -1,0 +1,22 @@
+Linux Fundamentals - Media Management Commands - NetSecNow - https://youtu.be/NsnE4WKAD4Q
+
+1. blkid (Useful to find out what file system a particular drive has)
+blkid /dev/sda5
+
+2. mount (Accompanied by various switches to mount devices, hard drives, cd-roms, etc.)
+mount -t ntfs /dev/sda3 /mnt/windows -o rw
+
+3. umount (Not UNmount, just umount)
+umount /mnt/windows -o rw
+
+4. fdisk (Disk Management, partition, etc)/use gparted instead if you can
+fdisk /dev/sda
+
+5. mkfs (Format a disk to a particular file system i.e ntfs, ext, fat)/use gparted instead if you can
+mkfs -t ntfs /dev/sda
+
+6. dd (Useful for Making Device files, images, and backing up files/disks)
+dd if=/dev/sda of=/dev/sdb
+dd if=/dev/zero of=/dev/sda
+dd if=/dev/sda of=/home/backups/full_image.img
+dd if=/dev/sda of=/home/backups/full_image.img bs=512
