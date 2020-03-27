@@ -1,1 +1,10 @@
 lspci -nnk | grep -A3 "\[03..\]:"
+
+
+#Alternativ einfach mal ausprobieren:
+
+lspci
+
+lspci | grep NVIDIA
+
+lspci | grep Magewell
