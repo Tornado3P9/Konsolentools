@@ -13,7 +13,7 @@
 # des Videos sowie der Dateiendung:
 #-o "~/Downloads/%(title)s-%(id)s.%(ext)s"
 # Ohne IDs:
--o "~/Downloads/%(title)s.%(ext)s"
+-o "~/Downloads/%(title)s - %(uploader)s.%(ext)s"
 # Beschränke Dateinamen auf reine ASCII-Zeichen und vermeide dort u.a. "&" und Leerzeichen, aber auch Umlaute;
 # wobei Leerzeichen in Unterstriche (_) sowie Umlaute in a, o und u umgewandelt werden:
 #--restrict-filenames
