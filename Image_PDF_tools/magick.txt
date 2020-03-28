@@ -1,0 +1,3 @@
+https://imagemagick.org/script/convert.php
+
+https://imagemagick.org/script/command-line-tools.php
