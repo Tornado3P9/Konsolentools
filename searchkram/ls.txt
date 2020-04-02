@@ -3,3 +3,7 @@ l = Auflistung
 A = Alles zeigen, bis auf "." oder ".."
 h = For Humans understandable.
 
+Weitere:
+ls -a
+ll
+dir (auch bei Windows)
