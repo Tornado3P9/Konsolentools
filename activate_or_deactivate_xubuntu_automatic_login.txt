@@ -1,0 +1,5 @@
+/usr/share/lightdm/lightdm.conf.d/60-xubuntu.conf
+
+[Seat:*]
+user-session=xubuntu
+autologin-user=MyUsername #add or delete
