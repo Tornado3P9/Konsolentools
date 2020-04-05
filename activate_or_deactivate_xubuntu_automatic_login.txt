@@ -2,4 +2,4 @@
 
 [Seat:*]
 user-session=xubuntu
-autologin-user=MyUsername #add or delete
+autologin-user=MyUsername #add or delete line
