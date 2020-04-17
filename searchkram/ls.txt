@@ -6,4 +6,5 @@ h = For Humans understandable.
 Weitere:
 ls -a
 ll
+l
 dir (auch bei Windows)

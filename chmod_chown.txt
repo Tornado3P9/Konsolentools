@@ -27,3 +27,7 @@ sudo chmod 764 filename
 
 #In Terminal: ls -lh
 xrw-rw-r-- ......... ist das Gleiche, wie 764
+
+#Programm für jeden ausführbar machen:
+sudo chmod +x program (Jeder kann das Programm ausführen)
+sudo chmod -x program (Keiner kann das Programm ausführen)
