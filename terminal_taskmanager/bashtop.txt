@@ -1,0 +1,7 @@
+git clone https://github.com/aristocratos/bashtop
+
+Oder:
+
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update
+sudo apt install bashtop

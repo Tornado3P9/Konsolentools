@@ -1,0 +1,7 @@
+z.B. listen to local network
+
+nmap -sn 192.168.178.0/24
+
+Also:
+ifconfig
+ip a

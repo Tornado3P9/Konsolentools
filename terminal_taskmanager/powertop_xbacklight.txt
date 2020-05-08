@@ -1,0 +1,14 @@
+sudo apt install tlp powertop xbacklight
+
+sudo powertop
+
+xbacklight [options]
+  where options are:
+  -display <display> or -d <display>
+  -help
+  -set <percentage> or = <percentage>
+  -inc <percentage> or + <percentage>
+  -dec <percentage> or - <percentage>
+  -get
+  -time <fade time in milliseconds>
+  -steps <number of steps in fade>
