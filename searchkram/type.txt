@@ -1,0 +1,2 @@
+user@pc:~$ type echo
+-> echo ist eine von der Shell mitgelieferte Funktion.

@@ -1,0 +1,23 @@
+user@pc:~$ echo hello world
+-> hello world
+user@pc:~$ echo "hello world"
+-> hello world
+user@pc:~$ echo "$(which echo)"
+-> /bin/echo
+user@pc:~$ echo "$(which echo)" > echo.txt
+
+The -e (enable backslash escapes) option lets us use some backslash-escaped characters to change the layout of the text.
+These are the backslash-escaped characters we can use:
+
+    \a: Alert (historically known as BEL). This generates the default alert sound.
+    \b: Writes a backspace character.
+    \c: Abandons any further output.
+    \e: Writes an escape character.
+    \f: Writes a form feed character.
+    \n: Writes a new line.
+    \r: Writes a carriage return.
+    \t: Writes a horizontal tab.
+    \v: Writes a vertical tab.
+    \\: Writes a backslash character.
+
+user@pc:~$ echo -e "This is a long line of text\nsplit across three lines\nwith\ttabs\ton\tthe\tthird\tline"
