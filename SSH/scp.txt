@@ -1,0 +1,5 @@
+On Unix-like operating systems, thescp command copies files over a secure, encrypted network connection.
+
+scp stands for "secure copy." It is similar to the standard Unix command, cp, but it operates over a secure network connection.
+
+# scp test.txt 192.168.0.14:~/Desktop/test.txt

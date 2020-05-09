@@ -1,0 +1,32 @@
+#Zeige Memory Usage: "free -h"
+
+free --help
+
+Aufruf:
+ free [OPTIONEN]
+
+Optionen:
+ -b, --bytes         Ausgabe in Byte anzeigen
+     -k, --kilo      Ausgabe in Kilobyte anzeigen
+     -m, --mega      Ausgabe in Megabyte anzeigen
+     -g, --giga      Ausgabe in Gigabyte anzeigen
+     --tera          Ausgabe in Terabyte anzeigen
+     --peta          Ausgabe in Petabyte anzeigen
+ -k, --kibi          Ausgabe in Kibibyte anzeigen
+ -m, --mebi          Ausgabe in Mebibyte anzeigen
+ -g, --gibi          Ausgabe in Gibibyte anzeigen
+     --tebi          Ausgabe in Tebibyte anzeigen
+     --pebi          Ausgabe in Pebibyte anzeigen
+ -h, --human         menschenlesbare Ausgabe
+     --si            Potenzen von 1000 und nicht 1024 verwenden
+ -l, --lohi          detaillierte Statistiken für hohe und niedrige
+                     Speicherbelegung anzeigen
+ -t, --total         Gesamtgröße von RAM + Swap anzeigen
+ -s N, --seconds N   Ausgabe alle N Sekunden wiederholen
+ -c N, --count N     Ausgabe N-mal wiederholen, dann beenden
+ -w, --wide          breite Ausgabe
+
+     --help     diese Hilfe anzeigen und beenden
+ -V, --version  Versionsinformationen ausgeben und beenden
+
+Für weitere Einzelheiten siehe free(1).
