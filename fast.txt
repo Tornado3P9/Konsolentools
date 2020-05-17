@@ -1,3 +1,0 @@
-sudo snap install fast
-
-(Check Internet Speed)

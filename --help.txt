@@ -8,3 +8,6 @@ man dpkg
 
 3. Im Internetbrowser:
 ubuntuusers dpkg    -> dann klick auf das, wo "Wiki" und "ubuntuusers.de" im Namen drin vorkommt
+
+alternative zu ubuntuusers: www.tecmint.com
+tecmint dpkg

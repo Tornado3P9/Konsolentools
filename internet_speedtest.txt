@@ -1,0 +1,7 @@
+##Speedtest_consoletool von Netflix
+$ sudo snap install fast
+$ fast
+
+##Speedtest von speedtest.net
+$ sudo apt install speedtest-cli
+$ speedtest-cli
