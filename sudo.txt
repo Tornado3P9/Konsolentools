@@ -1,0 +1,61 @@
+sudo - Einen Befehl als anderer Benutzer ausführen.
+       It allows administrators to control what commands each user can run as root.
+       For example, your administrator may allow you to run apt-get as root, but nothing else.
+       Furthermore, all commands run via sudo are logged in /var/log/auth.log
+
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+
+Optionen:
+  -A, --askpass                 Hilfsprogramm zum Eingeben des Passworts
+                                verwenden
+  -b, --background              Befehl im Hintergrund ausführen
+  -C, --close-from=num          Alle Dateideskriptoren >= num schließen
+  -E, --preserve-env            Benutzerumgebung beim Starten des Befehls
+                                beibehalten
+      --preserve-env=list       preserve specific environment variables
+  -e, --edit                    Dateien bearbeiten, statt einen Befehl
+                                auszuführen
+  -g, --group=group             Befehl unter angegebenem Gruppennamen oder
+                                Gruppenkennung ausführen
+  -H, --set-home                HOME-Variable als Home-Ordner des Zielnutzers
+                                setzen
+  -h, --help                    Hilfe ausgeben und beenden
+  -h, --host=host               Befehl auf entferntem System ausführen (falls
+                                vom Plugin unterstützt)
+  -i, --login                   Anmeldeshell als Zielnutzer starten; es kann
+                                auch ein Befehl angegeben werden
+  -K, --remove-timestamp        Zeitstempeldateien komplett entfernen
+  -k, --reset-timestamp         Zeitstempeldatei ungültig machen
+  -l, --list                    Benutzerrechte aufzählen oder einen bestimmten
+                                Befehl testen; für ein längeres Format
+                                zweimal angeben
+  -n, --non-interactive         Nicht-interaktiver Modus, es werden keine
+                                Prompts verwendet
+  -P, --preserve-groups         Gruppen-Vektor beibehalten, statt zu dem des
+                                Zielnutzers zu setzen
+  -p, --prompt=prompt           Angegebenen Passwort-Prompt benutzen
+  -r, --role=role               SELinux-Sicherheitskontext mit angegebener
+                                Funktion erstellen
+  -S, --stdin                   Passwort von der Standardeingabe lesen
+  -s, --shell                   Shell als Zielnutzer ausführen; es kann auch
+                                ein Befehl angegeben werden
+  -t, --type=type               SELinux-Sicherheitskontext mit angegebenem Typ
+                                erstellen
+  -T, --command-timeout=timeout Befehl nach einem angegeben Zeitlimit beenden
+  -U, --other-user=user         im Aufzählungsmodus, Rechte des Nutzers
+                                anzeigen
+  -u, --user=user               Befehl oder Datei unter angegebenem
+                                Benutzernamen oder Benutzerkennung ausführen
+                                bzw. ändern
+  -V, --version                 Versionsinformation anzeigen und beenden
+  -v, --validate                Den Zeitstempel des Benutzers erneuern, ohne
+                                einen Befehl auszuführen
+  --                            Aufhören, die Befehlszeilenargumente zu
+                                verarbeiten
