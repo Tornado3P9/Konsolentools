@@ -1,0 +1,10 @@
+Wann immer du dich mit einem Kommando nicht auskennst, sei es apt, dpkg oder was auch immer....
+
+1. Im Terminal:
+dpkg --help
+
+2. Im Terminal, aber noch komplexer:
+man dpkg
+
+3. Im Internetbrowser:
+ubuntuusers dpkg    -> dann klick auf das, wo "Wiki" und "ubuntuusers.de" im Namen drin vorkommt
