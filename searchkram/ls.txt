@@ -5,6 +5,9 @@ h = For Humans understandable.
 
 Weitere:
 ls -a
-ll
-l
 dir (auch bei Windows)
+
+Standard Alias:
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'

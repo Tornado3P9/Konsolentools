@@ -1,9 +1,12 @@
+#apt oder dpkg:
+
 sudo apt-get remove <application_name>
+sudo dpkg -r <application_name>
 #Nur Deinstallation
 
 sudo apt-get purge <package-name>
+sudo dpkg -p <package-name>
 #Komplette von der Festplatte gefegt
-
 
 sudo apt remove vlc && sudo apt autoremove
 #Entferne außerdem alle nicht verwendeten Pakete
