@@ -26,3 +26,15 @@ https://angryip.org/
 ## GET_IP:
 ifconfig
 ip a
+
+# traceroute
+ist ein Kommandozeilenwerkzeug, um den Transportweg von IP-Datenpaketen zwischen dem eigenen Rechner
+und einer ausgewählten Gegenstelle zu ermitteln. Dabei wird die Antwortzeit der durchlaufenen Router gemessen.
+In der Praxis kann das Programm genutzt werden, um einerseits das Routing einer Verbindung anzuzeigen und
+um andererseits den Verursacher von Verzögerungen zu identifizieren.
+$ traceroute google.com
+
+# mtr
+kombiniert die Funktionen von traceroute und ping zu einem Netzwerk-Diagnose-Werkzeug.
+Es sendet absichtlich Pakete mit niedriger Gueltigkeitsdauer.
+$ mtr google.com

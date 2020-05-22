@@ -5,3 +5,13 @@ $ fast
 ##Speedtest von speedtest.net
 $ sudo apt install speedtest-cli
 $ speedtest-cli
+
+##Testing Router, durch die die Pakete gesendet werden
+$ sudo apt install traceroute
+$ traceroute google.com
+oder:
+$ sudo apt install mtr #Vereint traceroute und ping
+$ mtr google.com
+
+##ping
+$ ping google.com
