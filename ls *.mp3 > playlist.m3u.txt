@@ -1,5 +1,0 @@
-ls *.mp3 > playlist.m3u
-#Lese alle mp3s aus innerhalb des Ordners aus und schreibe alle Namen in eine Playlist
-
-termtime --help >> termtime.txt
-#Schreibe die Ausgabe von "termtime --help" in "termtime.txt"...und erstelle die Datei, falls sie noch nicht existiert

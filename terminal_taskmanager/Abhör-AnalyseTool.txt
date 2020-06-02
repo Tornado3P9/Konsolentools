@@ -26,6 +26,10 @@ https://angryip.org/
 ## GET_IP:
 ifconfig
 ip a
+ip addr
+## GET_PUBLIC_IP:
+curl ifconfig.me
+(In Webbrowser: myip.is, ifconfig.me, ..)
 
 # traceroute
 ist ein Kommandozeilenwerkzeug, um den Transportweg von IP-Datenpaketen zwischen dem eigenen Rechner
