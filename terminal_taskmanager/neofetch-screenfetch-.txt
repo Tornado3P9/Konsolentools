@@ -1,0 +1,3 @@
+Super System- und Hardwareinformation in Bash Terminal!
+
+neofetch, same as screenfetch which is available for any OS!
