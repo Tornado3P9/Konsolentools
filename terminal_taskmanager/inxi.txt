@@ -1,0 +1,9 @@
+# inxi – System- und Hardware-Informationen am Terminal unter Linux anzeigen
+
+# Mit der Option “-vN” wobei das “N” einer Zahl zwischen 1 und 7 entspricht zeigt die Software entsprechend mehr Informationen an:
+
+inxi -v7
+
+# Etwas weniger Infos, dafür aber übersichtlicher erhält man Informationen aller Art mit den Optionen “-Fz“:
+
+inxi -Fz
