@@ -1,0 +1,16 @@
+### Open Filebrowser from terminal ###
+
+Ubuntu Gnome:
+nautilus .
+
+Ubuntu XFCE:
+thunar .
+
+### Open Downloads ###
+thunar Downloads
+
+### Open Parent Folder ###
+thunar ..
+
+### Open Current Folder ###
+thunar .
