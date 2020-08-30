@@ -14,3 +14,9 @@ thunar ..
 
 ### Open Current Folder ###
 thunar .
+
+
+
+
+Thunar:
+hide/unhide Taskbar -> Strg+M
