@@ -18,5 +18,21 @@ thunar .
 
 
 
-Thunar:
-hide/unhide Taskbar -> Strg+M
+### Xubuntu Thunar Menu Bar disabled
+shortcut: Strg+M
+
+xfce4-settings-editor is your friend.
+
+    Close all thunar windows
+    start xfce4-settings-editor from the console
+    locate thunar on the left hand tab
+    check last-menubar-visible
+    open a new thunar window
+
+done.
+
+Bonus:
+
+    memorize the shortcut key for your locale :)
+
+
