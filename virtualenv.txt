@@ -1,0 +1,53 @@
+##########################################################
+# Zwei Varianten https://wiki.ubuntuusers.de/virtualenv/
+##########################################################
+
+
+# virtualenv #
+##############
+
+Die Benutzung von virtualenv läuft über die beiden Kommandozeilen-Befehle virtualenv und source, wie im folgenden Beispiel gezeigt wird.
+
+Mit dem Aufruf
+
+    virtualenv venv_ordner  #18.04
+    #bzw.
+    virtualenv venv_ordner -p python3.5  #16.04 
+
+würde im Homeverzeichnis von BENUTZER eine neue virtuelle Python-Umgebung namens venv_ordner angelegt.
+Der Name der Testumgebung und auch der Pfad sind wählbar. Als Pfad bietet sich aber eigentlich immer das Homeverzeichnis an.
+Während der Installation wird automatisch der aktuell im System installierte Python-Interpreter installiert.
+Da dies unter Xenial aber noch Python 2.7 ist, sollte hier die Option -p python3.5 angegeben werden.
+Unter Bionic wird wird als Standard Python 3.6 installiert. Benötigt man wirklich noch Python 2.7.,
+gibt man unter Bionic die Option -p python2.7 an bzw. lässt unter Xenial die Option -p ganz weg.
+
+Außerdem wird automatisch pip mit installiert. Python-Modul, die systemweit installiert sind,
+werden nicht automatisch mit in die virtuelle Umgebung kopiert. In der virtuellen Umgebung sind somit
+"nur" die Module aus der Standardinstallation von Python sowie pip installiert
+
+Hat man virtualenv manuell für Python 3 installiert, dann lautet der Befehl virtualenv-3.5.
+Allerdings wird auch hier standardmäßig Python 2.7 in der virtuellen Umgebung eingerichtet,
+so dass auch hier ggf. die Option -p eingesetzt werden muss.
+
+Hat man ein virtuelle Umgebung angelegt, muss man diese noch aktivieren. Für das obige Beispiel lautet der Befehl:
+
+    source venv_ordner/bin/activate 
+
+Darauf hin ändert sich das Shell-Prompt, es ist ein (venv_ordner) vorangestellt. Dies hat für das normale Arbeiten
+in der Shell keinerlei Einfluss, allerdings startet der Aufruf von python3 bzw. python jetzt das Python aus der virtuellen Umgebung,
+nicht die global installierte Version.
+
+Um die virtuelle Umgebung zu verlassen, beendet man diese durch die Eingabe von deactivate am Shell-Prompt.
+Alternativ kann man das Terminal auch mit exit beenden.
+
+
+# venv (aus Python 3) #
+#######################
+
+Das in Python 3 (ab Python 3.3) enthaltene Modul venv lässt sich über den folgenden Befehl nutzen:
+
+    python3 -m venv venv_ordner 
+
+Dieser würde im Homeverzeichnis von BENUTZER eine virtuelle Umgebung namens venv_ordner anlegen.
+Die Aktivierung der virtuellen Umgebung erfolgt genau so wie bei virtualenv,
+also über den Befehl source ~/venv_ordner/bin/activate.
