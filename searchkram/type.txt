@@ -1,2 +1,9 @@
 user@pc:~$ type echo
 -> echo ist eine von der Shell mitgelieferte Funktion.
+
+### Was verbirgt sich hinter jenem Alias?
+user@pc:~$ type -a ls
+ls ist ein Alias von »ls --color=auto«.
+ls ist /usr/bin/ls
+ls ist /bin/ls
+user@pc:~$
