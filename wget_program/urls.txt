@@ -1,0 +1,2 @@
+https://website/program-latest-amd64.deb
+https://website/checksums.sha256
