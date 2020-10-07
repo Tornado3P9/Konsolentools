@@ -11,10 +11,6 @@ man dpkg
 ```
 
 3. Googeln:
-`ubuntuusers wiki dpkg` -> dann klick auf das, wo "Wiki" und "ubuntuusers.de" im Namen drin vorkommt  
-
-or for those who like www.tecmint.com:  
-`tecmint dpkg`
-
-4. Best for me!  
-`https://explainshell.com/`
+   - `ubuntuusers wiki dpkg` -> dann klick auf das, wo "Wiki" und "ubuntuusers.de" im Namen drin vorkommt
+   - `tecmint dpkg` -> www.tecmint.com
+   - `https://explainshell.com/`
