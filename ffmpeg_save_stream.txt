@@ -1,0 +1,5 @@
+ffmpeg -i "http://streamy.de:1935/live/playlist.m3u8" -c copy file.mp4
+
+or
+
+echo "Enter m3u8 link:";read link;echo "Enter output filename:";read filename;ffmpeg -i "$link" -c copy $filename.mp4
