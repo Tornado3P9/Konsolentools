@@ -1,0 +1,42 @@
+pactl list sources > pactlsources
+######################################
+Quelle #0
+	Status: IDLE
+	Name: alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1.monitor
+	Beschreibung: Monitor of GP104 High Definition Audio Controller Digital Stereo (HDMI 2)
+	Treiber: module-alsa-card.c
+	Abtastwert-Angabe: s16le 2ch 44100Hz
+	Kanalzuordnung: front-left,front-right
+        .
+        .
+        .
+
+
+
+############# Combine 3 audio input sources ##########
+ffmpeg \
+-i 1 -i 2 -i 3 etc... \
+-filter_complex amix=inputs=3 \
+finalfile.mkv
+
+############# Beispiel 1 - record setup for let's play ############
+ffmpeg \
+-f pulse -ac 2 -ar 48000 -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor \
+-f pulse -ac 1 -ar 44100 -i alsa_input.usb-AKM_AK5370-00-AK5370.analog-mono \
+-filter_complex amix=inputs=2 \
+-f x11grab -r 30 -s 1366x768 -i :0.0+0,0 \
+-vcodec libx264 -preset veryfast -crf 18 \
+-acodec libmp3lame -ar 44100 -q:a 1 \
+-pix_fmt yuv420p \
+/home/b/Videos/FilterComplexAmix.mkv
+############################################################
+
+############# Beispiel 2 ############
+
+# audio only
+ffmpeg -f pulse -i default output.wav
+ffmpeg -f pulse -ac 2 -ar 44100 -i alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1.monitor output.mp3
+
+# with screen capture
+ffmpeg -f x11grab -video_size 1360x768 -framerate 30 -i :0.0 -f pulse -i default -preset ultrafast -crf 18 -pix_fmt yuv420p out.mkv
+
