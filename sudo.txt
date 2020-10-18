@@ -3,6 +3,8 @@ sudo - Einen Befehl als anderer Benutzer ausführen.
        For example, your administrator may allow you to run apt-get as root, but nothing else.
        Furthermore, all commands run via sudo are logged in /var/log/auth.log
 
+If you forgot the sudo command then you can just type 'sudo !!' to run the last command with sudo in front. 
+
 usage: sudo -h | -K | -k | -V
 usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
 usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]

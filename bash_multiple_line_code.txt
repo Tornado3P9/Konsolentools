@@ -1,0 +1,12 @@
+#1. write with text editor and copy paste into the terminal
+
+#2. Start with ( and end with ) to tell bash that it’s about to read a multiline command!
+
+user@pc:~$ (
+> function hello {
+>     echo Hello!
+> }
+> hello
+> )
+Hello!
+
