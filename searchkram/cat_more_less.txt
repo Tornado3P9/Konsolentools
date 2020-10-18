@@ -1,0 +1,10 @@
+### Inhalt von Textdateien anzeigen ###
+
+# 1. meist ausreichend
+cat ebook.txt
+
+# 2. mehr ist immer gut
+more ebook.txt
+
+# 3. less is more and therefore king
+less ebook.txt
