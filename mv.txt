@@ -1,0 +1,38 @@
+# Move all files except one! (If you use bash and have the 'extglob' shell option set which is usually the case):
+mv ~/Linux/Old/!(Tux.png) ~/Linux/New/
+
+# Move alle files except these three:
+mv ~/Linux/Old/!(Tux.png|Tux1.png|Tux2.png) NewFolder/
+
+# moving everything from dir1 except dir1/src to dir2:
+mv -vt dir2/ dir1/!(src)
+# example:
+$ mkdir -pv dir1/{a,b,c,src} dir2
+mkdir: created directory 'dir1'
+mkdir: created directory 'dir1/a'
+mkdir: created directory 'dir1/b'
+mkdir: created directory 'dir1/c'
+mkdir: created directory 'dir1/src'
+mkdir: created directory 'dir2'
+$ ls -l dir1/
+total 16
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 a
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 b
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 c
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 src
+$ ls -l dir2/
+total 0
+$ shopt -s extglob
+$ mv -vt dir2/ dir1/!(src)
+'dir1/a' -> 'dir2/a'
+'dir1/b' -> 'dir2/b'
+'dir1/c' -> 'dir2/c'
+$ ls -l dir1/
+total 4
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 src
+$ ls -l dir2/
+total 12
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 a
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 b
+drwxrwxr-x 2 dw dw 4096 Apr  7 13:30 c
+
