@@ -1,9 +1,52 @@
-df -h
+## https://youtu.be/5njmUb1t47g
+
+
+# space utilization stats -human readable -Type -iNode usage
+df -hTi
+
+
+# show file system on which this file resides
+df -h /mnt/shared/myfile.txt
+-> /dev/sdb1  9.8G 23M ....
+
+
+# Disc space used by file
+du -h /var
+
+
+# Check for open files
+lsof -s #size of the file
+lsof -t #what process has got this file open?!
+lsof -u bestuser #check user "bestuser"
+
+# What processes on this system have files open at all?!
+fuser -c #current directory
+fuser -e #executable
+fuser -f #open file
+fuser -F #open file and being written to
+fuser -r #root directory
+fuser -m #memory mapped file or shared library
+fuser -a #show all files specified
+fuser -k #kill the process accessing a file
+fuser -i #ask user for confirmation
+fuser -u #append the name of the process owner to each process id number
+         #who owns the process that has the file open?
+Example: fuser -u /usr/bin/top #which user is running the top executable?
+
 
 lsblk (list block command)
 
+
 sudo fdisk -l
+
 
 hwinfo
 
+
 lsusb
+
+
+#Check file system health!
+Example:
+§ umount /dev/sdb1
+§ fsck /dev/sdb1
