@@ -1,26 +1,22 @@
-#Disable snap core service on Ubuntu 18.04
-To disable snapd service on Ubuntu 18.04 server, run below command to view all currently runnig snap service.
+## Disable Snaps
 
-administrator@nagios:~$ systemctl list-unit-files | grep snap
+This goes over how to Disable Snaps and making sure it doesn’t automatically reinstall.
 
-snap-core-4486.mount                   disabled
-snap-core-4830.mount                   disabled
-snapd.autoimport.service               enabled
-snapd.core-fixup.service               enabled
-snapd.seeded.service                   disabled
-snapd.service                          disabled
-snapd.snap-repair.service              static
-snapd.system-shutdown.service          enabled
-snapd.socket                           disabled
-snapd.snap-repair.timer                enabled
- 
-Run below commands to disable all the enabled snap services 1 by 1.
+# List and Uninstall Snaps
+snap list # This shows you what snaps are installed
+sudo snap remove program # Fill in all snaps listed above
 
-sudo systemctl disable snapd.service
-sudo systemctl disable snapd.seeded.service
-sudo systemctl disable snapd.socket
-sudo systemctl disable snap-core-4486.mount
-sudo systemctl disable snap-core-4830.mount
+# Purge Snaps and Block Reinstall
+sudo apt purge snapd
+sudo apt-mark hold snapd
+
+# Verify Uninstall
+apt list --install | grep snap
+
+
+
+
+
 
 #Oder einfach per alias:
 alias snapstop='sudo systemctl stop snapd.service'
