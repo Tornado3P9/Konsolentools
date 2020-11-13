@@ -19,6 +19,7 @@ lsof -s #size of the file
 lsof -t #what process has got this file open?!
 lsof -u bestuser #check user "bestuser"
 
+
 # What processes on this system have files open at all?!
 fuser -c #current directory
 fuser -e #executable
@@ -38,6 +39,9 @@ lsblk (list block command)
 
 
 sudo fdisk -l
+
+
+sudo parted -l
 
 
 hwinfo
