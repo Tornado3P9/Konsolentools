@@ -1,6 +1,0 @@
-md5sum ubuntu-11.10-dvd-i386.iso
--> 8044d756b7f00b695ab8dce07dce43e5 ubuntu-11.10-dvd-i386.iso
-
-echo -n "Your-String-Here" | md5sum
--> e4e6ca42342f95978a17c6257593c1e1  -
-
