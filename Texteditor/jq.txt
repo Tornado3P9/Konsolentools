@@ -25,3 +25,60 @@ Usage: jq [options] <jq filter> [file...]
 	 --argjson a v	set variable $a to JSON value <v>;
 	 --slurpfile a f	set variable $a to an array of JSON texts read from <f>;
 	See the manpage for more options.
+
+
+#######################################################
+#                                                     #
+#     Pretty print JSON with jq command in Linux      #
+#                                                     #
+#######################################################
+
+https://itsfoss.com/pretty-print-json-linux/
+
+sudo apt install jq
+
+jq . sample.json
+
+
+You may also tempt to use cat but I believe it one of the useless use of cat command.
+cat sample.json | jq
+
+
+Keep in mind that the above command will not impact the original JSON file. No changes will be written to it.
+
+You probably already know how to redirect the command output to a file in Linux. You probably also know that you cannot redirect to the same file and the tee command is not guaranteed to work all the time.
+
+If you want to modify the original JSON file with pretty print format, you can pipe the parsed output to a new file and then copy it to the original JSON file.
+jq . sample.json > pretty.json
+
+
+
+#######################################################
+#                                                     #
+#     Bonus: Minify a JSON file with jq command       #
+#                                                     #
+#######################################################
+
+jq -c < pretty.json
+
+
+You can also use cat and redirection if you want:
+cat pretty.json | jq -c
+
+
+
+#######################################################
+#                                                     #
+#   Using Python to pretty print JSON file in Linux   #
+#                                                     #
+#######################################################
+
+It’s more likely that you have Python installed on your system.
+If that’s the case, you can use it pretty print the JSON file in the terminal:
+
+python3 -m json.tool sample.json
+
+
+
+
+.
