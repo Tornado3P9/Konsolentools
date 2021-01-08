@@ -46,3 +46,37 @@ PS1="\u@\H :" -> username@domain:
     \[ – Start a sequence of non-displayed characters (useful if you want to add a command or instruction set to the prompt)
     \] – Close or end a sequence of non-displayed characters
 
+
+You can use these options in either method – temporarily with the "export" command, or permanently by editing the ~/.bashrc file.
+
+$ export PS1="\e[0;32m[\u@\h \W]\$ \e[0m"
+[test@ubuntu1 ~]$ 
+
+Your prompt should have the same text as normal but be colored green.
+
+Here’s a breakdown of the commands:
+
+• \e[ – Begin color changes
+• 0;32m – Specify the color code
+• [\u@\h \W]\$ – This is the code for your normal BASH prompt (username@hostname Workingdirectory $)
+• \e[0m – Exit color-change mode
+
+The first number in the color code specifies the typeface:
+
+• 0 – Normal
+• 1 – Bold (bright)
+• 2 – Dim
+• 4 – Underlined
+
+The second number indicates the color you want:
+
+• 30 – Black
+• 31 – Red
+• 32 – Green
+• 33 – Brown
+• 34 – Blue
+• 35 – Purple
+• 36 – Cyan
+• 37 – Light gray
+
+Additionally, if you combine the bright option with a color code, you get a lighter version of that color. For example, if you use color code 1;32, you would get light green instead of the normal green. If you use 1;33, you get yellow instead of brown.

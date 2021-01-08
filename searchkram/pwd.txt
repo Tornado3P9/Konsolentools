@@ -1,0 +1,4 @@
+## print current working directory
+
+$ pwd
+/home/user01/myDirectory
