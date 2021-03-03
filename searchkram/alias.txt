@@ -35,6 +35,9 @@ alias ae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias de='deactivate'
 # create, start and stop python virtual environment
 
+#count files
+alias count='find . -type f | wc -l'
+
 unalias name
 # deletes the alias with the name 'name'
 # z.B. unalias home

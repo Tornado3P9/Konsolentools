@@ -49,6 +49,10 @@ hwinfo
 
 lsusb
 
+#view only mounted drives
+mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort
+#better to create an alias in ".bashrc" for a long task like this
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
 
 #Check file system health!
 Example:
