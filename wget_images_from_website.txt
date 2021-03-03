@@ -1,0 +1,30 @@
+*****************
+*   Version A   *
+*****************
+
+#To download all images from the specified page with wget you can use this command:
+
+wget -i `wget -qO- https://website.com/ | sed -n '/<img/s/.*src="\([^"]*\)".*/\1/p'`
+
+#In this example HTML file is download with wget to STDOUT, parsed with sed so that only img URL remain and passed to wget -i as an input list for downloading.
+#Note that it will download only the images on this page, but they might just be thumbnails (350px wide).
+#If you'd like to download full images, you should go a step forward and change the parsed IMG urls so that they correspond the hi-res images. You can do it with sed or awk:
+
+wget -i `wget -qO- https://website.com/ | sed -n '/<img/s/.*src="\([^"]*\)".*/\1/p' | awk '{gsub("thumb-350-", "");print}'`
+
+
+*****************
+*   Version B   *
+*****************
+
+# get all pages
+curl 'http://domain.com/id/[1-151468]' -o '#1.html'
+
+# get all images
+grep -oh 'http://pics.domain.com/pics/original/.*jpg' *.html >urls.txt
+
+# download all images
+sort -u urls.txt | wget -i-
+
+## use grep -oh to remove the filenames before urls.
+
