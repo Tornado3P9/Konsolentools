@@ -1,3 +1,7 @@
+https://trac.ffmpeg.org/wiki/Capture/PulseAudio
+https://trac.ffmpeg.org/wiki/Capture/ALSA
+
+
 pactl list sources > pactlsources
 ######################################
 Quelle #0

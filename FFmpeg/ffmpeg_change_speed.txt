@@ -5,7 +5,9 @@
   Speeding up/slowing down video
 **********************************
 
-The speed of a video stream can be changed by changing the presentation timestamp (PTS) of each video frame. This can be done via two methods: using the ​setpts video filter (which requires re-encoding) or by erasing the timestamps by exporting the video to a raw bitstream format and muxing to a container while creating new timestamps.
+The speed of a video stream can be changed by changing the presentation timestamp (PTS) of each video frame.
+This can be done via two methods: using the ​setpts video filter (which requires re-encoding)
+or by erasing the timestamps by exporting the video to a raw bitstream format and muxing to a container while creating new timestamps.
 
 Note that in the following examples, the audio stream is not changed, so it should ideally be disabled with -an. 
 
@@ -70,7 +72,8 @@ You can speed up or slow down audio with the ​atempo audio filter. To double t
 
 ~$ ffmpeg -i input.mkv -filter:a "atempo=2.0" -vn output.mkv
 
-The atempo filter is limited to using values between 0.5 and 2.0 (so it can slow it down to no less than half the original speed, and speed up to no more than double the input). If you need to, you can get around this limitation by stringing multiple atempo filters together. The following with quadruple the audio speed:
+The atempo filter is limited to using values between 0.5 and 2.0 (so it can slow it down to no less than half the original speed, and speed up to no more than double the input).
+If you need to, you can get around this limitation by stringing multiple atempo filters together. The following with quadruple the audio speed:
 
 ~$ ffmpeg -i input.mkv -filter:a "atempo=2.0,atempo=2.0" -vn output.mkv
 
