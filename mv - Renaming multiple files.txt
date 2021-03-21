@@ -1,4 +1,4 @@
-# Renaming multiple files with the mv Command:
+# Renaming multiple files with the mv Command: https://linuxize.com/post/how-to-rename-files-in-linux/
 #
 # The mv command can rename only one file at a time, but it can be used in conjunction with other commands
 # such as find or inside bash for or while loops to rename multiple files.
@@ -6,11 +6,9 @@
 # The following example shows how to use the Bash for loop to rename all .html files in the current directory
 # by changing the .html extension to .php
 
-
 for f in *.html; do
   mv -- "$f" "${f%.html}.php"
 done
-
 
 # Let’s analyze the code line by line:
 #
@@ -18,6 +16,21 @@ done
 # - The second line applies to each item of the list and moves the file to a new one replacing .html with .php
 #   The part ${file%.html} is using the shell parameter expansion to remove the .html part from the filename
 # - done indicates the end of the loop segment
-#
-#
-# https://linuxize.com/post/how-to-rename-files-in-linux/
+
+
+
+# Alternative: https://www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux/
+sudo apt install rename
+
+Try
+rename "extra.test" "" *
+
+Or
+rename 's/extra.test//;' *
+
+For
+extra.test-eggs.txt -> -eggs.txt
+
+# Alternative
+for filename in ./*; do mv "./$filename" "./$(echo "$filename" | sed -e 's/test.extra//g')";  done
+
