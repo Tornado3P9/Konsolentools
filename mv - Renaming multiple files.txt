@@ -23,8 +23,8 @@ sudo apt install rename
 
 rename 's/chooseOldTextPartUsingRegex/changeTo/' *.m4a
 
-# Delete by leaving the changeTo part empty:
-rename 's/chooseOldTextPartUsingRegex//' *.m4a
+# Delete each '#' in all filenames by leaving the changeTo part empty:
+rename 's/#//' *.m4a
 
 
 # Alternative
