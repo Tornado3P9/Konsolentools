@@ -27,6 +27,7 @@ history
 history | grep your_search
 
 history | tail -5
+#see also in 'ls.txt'
 
 
 
