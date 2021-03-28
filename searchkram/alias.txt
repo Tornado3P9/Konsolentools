@@ -28,7 +28,6 @@ alias gh='history|grep'
 alias left='ls -t -1'
 # help me find where I left off!
 # The output is simple, although you can extend it with the --long option if you prefer.
-#           $ left
 
 alias ve='python3 -m venv ./venv'
 alias ae='deactivate &> /dev/null; source ./venv/bin/activate'
