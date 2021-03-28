@@ -41,3 +41,8 @@ alias count='find . -type f | wc -l'
 unalias name
 # deletes the alias with the name 'name'
 # z.B. unalias home
+
+
+alias wr=”cd /var/www/html”
+#Creating Temporary Aliases that only lives in current terminal session
+#Save in ".bashrc" for permanent use
