@@ -12,8 +12,8 @@
 #./bash-countdown.sh -d "Mar 23 2036"
 #3. countdown time to 21:06 from now:
 #./bash-countdown.sh -d 21:06
-#4. countdown time to 21:06:45 from now:
-#./bash-countdown.sh -d 21:06:45
+#4. countdown time to 21:06:45 from now and play ringtone using mpv-player:
+#./bash-countdown.sh -d 21:06:45 && mpv ringtone.mp3
 #
 #Do not forget to make bash-countdown.sh script executable before execution:
 #$ chmod +x countdown.sh
