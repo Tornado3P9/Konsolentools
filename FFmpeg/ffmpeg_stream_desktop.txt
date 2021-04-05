@@ -5,3 +5,5 @@ ffmpeg \
 -c:v libx264 -preset fast -g 60 -vf format=yuv420p \
 -c:a aac -b:a 128k \
 -f flv rtmp://192.168.0.150/live
+
+#https://trac.ffmpeg.org/wiki/EncodingForStreamingSites

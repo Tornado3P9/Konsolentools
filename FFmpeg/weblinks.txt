@@ -1,0 +1,20 @@
+Cutting small sections
+https://trac.ffmpeg.org/wiki/Seeking#Cuttingsmallsections
+
+Encoding for streaming sites
+https://trac.ffmpeg.org/wiki/EncodingForStreamingSites
+
+Capturing your Desktop / Screen Recording
+https://trac.ffmpeg.org/wiki/Capture/Desktop
+
+Speeding up slowing down video
+https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video
+
+Record - ALSA
+https://trac.ffmpeg.org/wiki/Capture/ALSA
+
+Record - PulseAudio
+https://trac.ffmpeg.org/wiki/Capture/PulseAudio
+
+Audio Volume Manipulation
+https://trac.ffmpeg.org/wiki/AudioVolume
