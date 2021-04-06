@@ -1,3 +1,8 @@
+# Hexdump – Console Hex Editor
+hexdump -C filename
+
+
+
 # jeex
 
 Usage:
@@ -18,7 +23,6 @@ Jeex Options:
 	Shows the file's portion.
   -p [FILE:start_byte,end_byte], --show-portion [FILE:start_byte,end_byte]
 	Shows the file's data in structures with types specified.
-
 
 
 
