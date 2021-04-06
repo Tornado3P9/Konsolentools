@@ -1,4 +1,5 @@
-# Hexdump – Console Hex Editor
+# Hexdump
+
 hexdump -C filename
 
 
