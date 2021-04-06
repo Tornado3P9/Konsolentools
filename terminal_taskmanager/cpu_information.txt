@@ -1,0 +1,6 @@
+lscpu
+
+./cpufetch
+https://itsfoss.com/cpufetch/
+
+neofetch
