@@ -1,0 +1,8 @@
+ifconfig
+
+
+ip addr show
+
+
+ip a s
+

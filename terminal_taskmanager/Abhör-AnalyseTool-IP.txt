@@ -25,6 +25,8 @@ https://angryip.org/
 
 ## GET_IP:
 ifconfig
+ip a s
+ip addr show
 ip a
 ip addr
 ## GET_PUBLIC_IP:
