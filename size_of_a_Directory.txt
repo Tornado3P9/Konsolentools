@@ -1,0 +1,27 @@
+#https://phoenixnap.com/kb/show-linux-directory-size
+
+
+### Disc Usage = du
+# Use the sudo or su command to get access privileges
+
+du -h
+
+du -h /var
+
+
+
+
+### Tree Like Structure
+
+tree -d -h
+
+tree /var
+
+
+
+
+### NCurses Disk Usage
+
+ncdu
+
+ncdu /var

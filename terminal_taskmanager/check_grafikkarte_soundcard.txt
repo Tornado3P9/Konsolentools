@@ -8,3 +8,6 @@ lspci
 lspci | grep NVIDIA
 
 lspci | grep Magewell
+
+
+#Informationen zur Soundcard sollten sich mit lspci auch finden.

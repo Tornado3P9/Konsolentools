@@ -5,15 +5,4 @@
 recordmydesktop -y 88 --width 1440 --height 810 --fps 24 --no-sound -o ~/Downloads/Movie.mp4
 
 
-Oder:
-Use the following command:
-
-ffmpeg -f oss -i /dev/audio -f x11grab -s 1280x1024 -r 3 -aq 50 -i :0.0 /tmp/out.mp4
-
-This records both sound and video of my screen.
-I have an attached monitor, so :0.0 is that monitor.
-The -r 3 keeps the file size smaller by doing 3 frames per second,
-which causes the mouse to jerk around slightly, but is suitable for tutorials.
-Increase that 3 towards 30 for much higher quality (but larger file size).
-The -aq 50 stands for audio quality at 50%, which is suitable for listening to tutorials on your laptop,
-but not suitable for like a large conference, where removing the -aq option might be best.
+Or see under the FFmpeg folder!
