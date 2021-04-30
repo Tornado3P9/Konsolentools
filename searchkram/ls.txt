@@ -1,4 +1,4 @@
-ls -lAh
+ls -1v
 l = Auflistung
 A = Alles zeigen, bis auf "." oder ".."
 h = For Humans understandable.
@@ -6,6 +6,7 @@ h = For Humans understandable.
 -X = Sorted by extension
 -t = Ordered by time
 -r = reverse order
+-v = sorted by (version) numbers within text
 
 Weitere:
 ls -a
