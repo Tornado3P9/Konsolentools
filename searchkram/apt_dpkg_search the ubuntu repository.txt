@@ -1,0 +1,29 @@
+apt search <Program Name>
+
+z.B.: apt search subtitle
+
+
+
+apt list --upgradeable
+
+apt list firefox
+
+apt list -a firefox
+
+
+apt list --installed
+
+apt list --installed | grep package_name
+
+apt list --installed | grep apache
+
+
+dpkg --list
+
+dpkg --list | grep package_name
+
+dpkg --list | grep apache
+
+#You can also count the number of installed packages on your system
+dpkg --list | grep -v "^Listing" | wc --lines
+
