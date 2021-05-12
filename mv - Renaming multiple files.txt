@@ -21,10 +21,25 @@ done
 # Better Way:
 sudo apt install rename
 
+rename --version
+rename --help
+
 rename 's/chooseOldTextPartUsingRegex/changeTo/' *.m4a
 
 # Delete each '#' in all filenames by leaving the changeTo part empty:
 rename 's/#//' *.m4a
+
+# You can use the -n option to print names of files to be renamed, without renaming them.
+rename -n 's/.html/.php/' \*.html
+
+# Replace spaces in filenames with underscores
+rename 'y/ /\_/' \*
+
+# Convert filenames to lowercase
+rename 'y/A-Z/a-z/' \*
+
+# Convert filenames to uppercase
+rename 'y/a-z/A-Z/' \*
 
 
 # Alternative
