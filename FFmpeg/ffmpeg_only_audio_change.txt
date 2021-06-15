@@ -1,0 +1,7 @@
+// https://trac.ffmpeg.org/wiki/AudioVolume   https://cloudinfrastack.com/blog/others/using_ffmpeg_to_convert_audio_and_video_formats/
+
+// Only change the audio +30dB but leave the video alone:
+ffmpeg -i movie.mp4 -filter:a "volume=30dB" -c:v copy movie.mp4
+// set aac as the audio codec with a bitrate of 128 Kbit/s:
+ffmpeg -i movie.mp4 -filter:a "volume=30dB" -codec:a aac -b:a 128k -c:v copy movie.mp4
+
