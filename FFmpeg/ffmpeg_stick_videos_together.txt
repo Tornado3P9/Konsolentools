@@ -1,0 +1,117 @@
+// https://blog.feurious.com/concatenate-videos-together-using-ffmpeg
+
+
+I have found it very useful to concatenate multiple video files together after working on them separately. It turns out, that is rather simple to do with ffmpeg.
+
+
+How do we do this?
+
+There are three methods I have found thus far:
+
+    Using the concat demuxer approach
+        This method is very fast as is avoids transcoding
+
+        This method only works if the files have the same video and audio encoding, otherwise artifacts will be introduced
+
+
+    Using file level concatenation approach
+        There are some encodings that support file level concatenation, kinda like just using cat on two files in the terminal
+
+        There are very few encodings that can do this, the only one I've used the is MPEG-2 Transport Stream codec (.ts)
+
+
+    Using a complex filtergraph with the concat filter
+        This method can concat videos with different encodings
+
+        This will cause a transcoding to a occur, so it takes time and may degrade quality
+
+        The syntax is hard to understand if you've never written complex filtergraphs before for ffmpeg
+
+
+
+Lets look at the examples, first the concat demuxer approach:
+
+ffmpeg -f concat -i list.txt -c copy out.mp4
+
+
+
+Unlike most ffmpeg commands, this one takes in a text file containing the files we want to concatenate, the text file would look something like this:
+
+file 'video1.mp4'
+file 'video2.mp4'
+
+
+
+The example for the file level concatenation would look like this:
+
+ffmpeg -i "concat:video1.ts|video2.ts" -c copy out.ts
+
+
+
+and the last example would be like so:
+
+ffmpeg -i video1.mp4 -i video2.flv -filter_complex \
+"[0:v][0:a][1:v][1:a] concat=n=2:v=1:a=1 [outv] [outa]" \
+-map "[outv]" -map "[outa]" out.mp4
+
+
+
+This one is probably pretty confusing, so let me explain the complex filtergraph syntax:
+
+Unlike using filters normally with ffmpeg using -vf or -af, when using a complex filtergraph, we have to tell ffmpeg what streams of data we are operating on per filter.
+
+At the start you see:
+
+    [0:v][0:a][1:v][1:a]
+
+
+
+This translates in plain english to:
+
+    Use the video stream of the first input source, use the audio stream from the first input source, use the video stream from the second input source, and use the audio stream from the second input source.
+
+
+
+The square bracket syntax indicates:
+
+    [indexofinput:stream_type]
+
+
+
+Those of us with experience in programming will understand why the index starts at 0 and not 1
+
+Now after we declared what streams we are using, we have a normal filter syntax:
+
+    concat=n=2:v=1:a=1
+
+
+
+concat is the name of the filter
+
+n=2 is specifying there are two input sources
+
+v=1 indicates each input source has only one video stream and to write only one video stream out as output
+
+a=1 indicates each input source has only one audio stream and to write only one audio stream out as output
+
+Next, we label the streams of data created by the filter using the bracket syntax:
+
+    [outv] [outa]
+
+
+
+Here, we are calling the newly created video stream outv and the audio stream outa, we need these later when using the -map flag on the output
+
+Lastly, we need to explicitly tell ffmpeg what streams of data to map to the output being written to the file, using the -map option
+
+    -map “[outv]” -map “[outa]”
+
+
+
+That names look familiar? Its what we labeled the streams created from the concat filter. We are telling ffmpeg:
+
+    Don't use the streams directly from the input files, instead use these data streams created by a filtergraph.
+
+
+
+And with that, ya let it run and tada, you have concatenated two videos with completely different encodings, hurray!
