@@ -1,6 +1,12 @@
+1) erster Punkt
 00:01:00
+2) zweiter Punkt
 00:30:00
+3) dritter Punkt
 00:40:00
+4) vierter Punkt
 00:50:00
+5) fuenfter Punkt
 01:01:20
+6) sechster Punkt
 01:20:50
