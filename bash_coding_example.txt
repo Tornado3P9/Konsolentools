@@ -16,3 +16,18 @@ for (( i=0; i<$len; i++ )); do echo "${value[$i]}" ; done
 # 2.
 #### Oder als Einzeiler:
 for val in "$(ls -1v)"; do echo -e "$val \n"; done
+
+
+
+
+
+# Operators:
+                         Shell Script              Perl
+Boolean Operator     Numeric     String     Numeric    String
+===================  =======     ======     =======    ======
+Equals                 -eq        =           ==         eq
+Not Equals             -ne        !=          !=         ne
+Greater Than           -gt        >           >          gt
+Less Than              -lt        <           <          lt
+Greater or Equals      -ge        >=          >=         ge
+Less Than or Equals    -le        <=          <=         le
