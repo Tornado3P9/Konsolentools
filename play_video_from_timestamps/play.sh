@@ -16,17 +16,27 @@ VIDEO=$1
 line=1
 while true
 do
-  read -p "play: " line
-  line=$(( line*2 ))
-  if [ $line -eq 0 ]
-  then 
-    break
-  elif [ $line -lt 0 ]
+  if [ -z "$1" ]
   then
-    cat $FILE
+    echo -e "No arguments supplied.\n./play.sh videofilename.mp4\n"
+    break
+  fi
+  read -p "play: " line
+  if [ "$line" -eq "$line" ] 2> /dev/null
+  then
+    line=$(( line*2 ))
+    if [ $line -eq 0 ]
+    then 
+      break
+    elif [ $line -lt 0 ]
+    then
+      cat $FILE
+    else
+      timestamp=$(head -n $line $FILE | tail -1)
+      mpv --fs "$1" --start=$timestamp
+    fi
   else
-    timestamp=$(head -n $line $FILE | tail -1)
-    mpv --fs "$1" --start=$timestamp
+    echo "invalid 'number'"
   fi
   printf "\n"
 done
