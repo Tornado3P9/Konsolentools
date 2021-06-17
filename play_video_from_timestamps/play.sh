@@ -11,6 +11,8 @@
 # If you want the timestamp.txt to be more simple, say you want to have the timestamps only
 # and no comments, then you can do that, but you also have to delete the code line
 # "line=$(( line*2 ))" from this script because it ignores every second line.
+# You can also decide to not start with full-screen and with a different window-scale:
+# mpv "$1" --start=$timestamp --window-scale=1.5
 FILE="$(dirname "$(readlink -f "$0")")/timestamp_list.txt"
 VIDEO=$1
 line=1
