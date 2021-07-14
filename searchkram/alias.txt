@@ -46,3 +46,4 @@ alias wr='cd /var/www/html'
 #Creating Temporary Aliases that only lives in current terminal session
 
 #Save in ".bashrc" for permanent use or create external file in the same home folder and paste all your aliases there: touch ~/.bash_aliases
+#More Aliases at: https://github.com/Tornado3P9/installscript-linux/blob/master/alias.txt

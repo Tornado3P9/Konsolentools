@@ -1,7 +1,6 @@
 #!/bin/bash
 #### Read the array values with space
 
-
 # 1.
 ## put string array into $value
 value=$(ls -1v);
@@ -9,9 +8,11 @@ value=$(ls -1v);
 ## get length of $value array
 len=${#value[@]};
 
-## Use for loop
-for (( i=0; i<$len; i++ )); do echo "${value[$i]}" ; done
-
+## Use for loop #https://linuxize.com/post/bash-for-loop/
+for (( i=0; i<$len; i++ ))
+do
+  echo "${value[$i]}"
+done
 
 # 2.
 #### Oder als Einzeiler:
